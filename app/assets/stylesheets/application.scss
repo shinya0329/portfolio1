@@ -19,8 +19,45 @@
 
 /* ブラウザがそれぞれ持っているCSSをリセットするための記述 */
 * {
- 
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
+.jumbotron-extend {
+  position: relative;
+  height: 100vh;
+  min-height: 350px;
+  background: url(photo1.jpg) no-repeat center center;
+  background-size: cover;
+}
 
+.jumbotron-container {
+  position: relative;
+  top: 40%;
+}
+
+.site-name, {
+  padding-bottom: 0;
+  margin-bottom: 30px;
+  font-family: 'Playfair Display', serif;
+}
+
+.btn-Sign-Up {
+  background-color: rgba(26, 237, 34, 0.6);
+  color: #fff;
+  font-family: 'Avenir', serif;
+}
+.btn-Sign-Up:hover {
+  background-color: green;
+  color: #fff;
+}
+.btn-Log-in {
+  background-color: rgba(0, 102, 255, 0.6);
+  color: #fff;
+  font-family: 'Avenir', serif;
+}
+.btn-Log-in:hover {
+  background-color: blue;
+  color: #fff;
+}
