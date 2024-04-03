@@ -17,6 +17,7 @@
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
 
+
 /* ブラウザがそれぞれ持っているCSSをリセットするための記述 */
 * {
   margin: 0;
@@ -24,6 +25,7 @@
   box-sizing: border-box;
 }
 
+// ここからTop画面のCSS
 .jumbotron-extend {
   position: relative;
   height: 100vh;
@@ -38,8 +40,6 @@
 }
 
 .site-name, {
-  padding-bottom: 0;
-  margin-bottom: 30px;
   font-family: 'Playfair Display', serif;
 }
 
@@ -61,3 +61,20 @@
   background-color: blue;
   color: #fff;
 }
+// ここまで
+
+// ここからabout画面のCSS
+
+.jumbotron-about {
+  position: relative;
+  height: 60vh;
+  min-height: 250px;
+  background: url(photo1.jpg) no-repeat center center;
+  background-size: cover;
+}
+.proverb {
+  position: relative;
+  top: 40%;
+  font-family: 'Avenir', serif;
+}
+// ここまで
