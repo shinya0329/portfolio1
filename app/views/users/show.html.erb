@@ -1,11 +1,21 @@
 <main>
+  
   <div class="py-5 bg-image-full">
     <div class="text-center my-5">
       <%= attachment_image_tag @user, :profile_image, :fill, 150, 150, fallback: "default-image.jpg", class:"img-fluid rounded-circle mb-4"; %>
-      <h1 class="text-white fs-3 fw-bolder">Full Width Pics</h1>
-      <p class="text-white-50 mb-0">Landing Page Template</p>
+      <h1 class="text-white fs-3 fw-bolder">User Name</h1>
+      <p class="text-white-50 mb-0">my introduction</p>
+      
     </div>
   </div>
+  
+  <div class="page-section text-light" style="background-color: #393C49;" >
+    <div class="container px-4 px-lg-5">
+      <h2 class="text-center mt-0">My posts</h2>
+      <hr class="divider"/>
+    </div>
+  </div>
+  
   <div id="portfolio">
       <div class="container-fluid p-0">
           <div class="row g-0">
