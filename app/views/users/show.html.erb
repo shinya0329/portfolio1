@@ -4,8 +4,10 @@
     <div class="text-center my-5">
       <%= attachment_image_tag @user, :profile_image, :fill, 150, 150, fallback: "default-image.jpg", class:"img-fluid rounded-circle mb-4"; %>
       <h1 class="text-white fs-3 fw-bolder">User Name</h1>
+       <a class="btn btn-outline-secondary w-25" href="">
+        <i class="fas fa-user-cog"></i>
+      </a>
       <p class="text-white-50 mb-0">my introduction</p>
-      
     </div>
   </div>
   
