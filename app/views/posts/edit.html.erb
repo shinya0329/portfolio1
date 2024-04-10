@@ -1,9 +1,10 @@
-<h1>新規投稿フォーム</h1>
+<h1>投稿編集フォーム</h1>
 <%= form_with model: @post, local:true do |f| %>
 
   <h4>Shop Name</h4>
   <%= f.text_field :shop_name %>
   <h4>Shop Image</h4>
+  <!--現在の画像の表示も作って-->
   <%= f.attachment_field :image %>
   <h4>Introduction</h4>
   <%= f.text_area :caption %>
@@ -11,5 +12,5 @@
   <%= f.text_field :category %>
  
   
-  <%= f.submit '投稿' %>
+  <%= f.submit 'Edit' %>
 <% end %>

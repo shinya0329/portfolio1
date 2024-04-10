@@ -8,5 +8,7 @@
   <p>説明：<%= post.caption %></p>
   <p>Category：<%= post.category %></p>
   <p>ユーザーネーム：<%= post.user.name %></p>
+  
+   <p><%= link_to "#{post.comments.count} コメント", post_path(post.id) %></p>
 </div>
 <% end %>
