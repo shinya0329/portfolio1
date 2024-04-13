@@ -1,2 +1,69 @@
-<h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
+<main>
+  <div class="main-User">
+    <!--メインビジュアルイメージ-->
+    <div class="masthead py-5">
+        <div class="masthead-content text-white">
+            <div class="container-fluid px-4 py-5 my-5 px-lg-0">
+                <h1 class="my-5">Welcome Users Page!!</h1>
+                <p class="mb-5">I'm working hard to finish the development of this site.</p>
+                <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                    <!-- Email address input-->
+                    <div class="row input-group-newsletter">
+                        <div class="col"><input class="form-control" id="email" type="email" placeholder="Enter email address..." aria-label="Enter email address..." data-sb-validations="required,email" /></div>
+                        <div class="col-auto"><button class="btn btn-primary disabled" id="submitButton" type="submit">Notify Me!</button></div>
+                    </div>
+                    <div class="invalid-feedback mt-2" data-sb-feedback="email:required">An email is required.</div>
+                    <div class="invalid-feedback mt-2" data-sb-feedback="email:email">Email is not valid.</div>
+                    <div class="d-none" id="submitSuccessMessage">
+                        <div class="text-center mb-3 mt-2">
+                            <div class="fw-bolder">Form submission successful!</div>
+                            To activate this form, sign up at
+                            <br />
+                            <a href="">https://startbootstrap.com/solution/contact-forms</a>
+                        </div>
+                    </div>
+                    <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3 mt-2">Error sending message!</div></div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="social-icons">
+        <div class="d-flex flex-row flex-lg-column justify-content-center align-items-center h-100 mt-3 mt-lg-0">
+            <a class="btn btn-dark m-3" href="#!"><i class="fab fa-twitter"></i></a>
+            <a class="btn btn-dark m-3" href="#!"><i class="fab fa-facebook-f"></i></a>
+            <a class="btn btn-dark m-3" href="#!"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+  </div>
+    <!--ここまで-->
+  
+    <!--card-->
+    <section class="py-5" style="background-color:  #393C49;">
+      <div class="container px-3 px-lg-4 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 ">
+          <% @users.each do |user| %>
+            <div class="col mb-5">
+              <div class="card h-100 text-white bg-dark shadow">
+                  <%= attachment_image_tag user, :profile_image, fallback: "photo1.jpg", class:"card-img-top"; %>
+                  <div class="card-body py-2 py-3">
+                      <p class="card-title">
+                        <i class="fa-solid fa-user"></i>  <%= user.name %>
+                      </p>
+                      <p class="card-text">
+                        <i class="fa-solid fa-heart"></i> favorite category
+                      </p>
+                      <p class="card-text">
+                        <i class="fa-solid fa-arrow-up-from-bracket"></i> <%= user.posts.count %>Posts
+                      </p>
+                      <%= link_to user_path(user), class:"btn btn-sm btn-block btn-primary" do %>
+                        More
+                      <% end %>
+                  </div>
+              </div>
+            </div>
+            
+          <% end %>
+        </div>
+      </div>
+    </section>
+</main>

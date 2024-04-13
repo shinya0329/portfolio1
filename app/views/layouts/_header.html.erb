@@ -12,9 +12,9 @@
           <% if user_signed_in? %>
           <!--リンクの実装して-->
           <li class"nav-item">
-            <a class="nav-link text-light" href="">
+            <%= link_to user_path(current_user.id), class:"nav-link text-light" do %>
               <i class="fas fa-home"></i>Home
-            </a>
+            <% end %>
           </li>
           <li class="nav-item">
             <a class="nav-link text-light" href="">

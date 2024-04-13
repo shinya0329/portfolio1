@@ -1,16 +1,26 @@
 <main>
   
-  <div class="py-5 bg-image-full">
-    <div class="text-center my-5">
-      <%= attachment_image_tag @user, :profile_image, :fill, 150, 150, fallback: "default-image.jpg", class:"img-fluid rounded-circle mb-4"; %>
-      <h1 class="text-white fs-3 fw-bolder">User Name</h1>
-       <a class="btn btn-outline-secondary w-25" href="">
-        <i class="fas fa-user-cog"></i>
-      </a>
-      <p class="text-white-50 mb-0">my introduction</p>
+  <div class="bg-image-full">
+    <div class="col-12 h-100 py-5" style="background-color: rgba(0,0,0,0.5);">
+      <div class="text-center my-5">
+        <%= attachment_image_tag @user, :profile_image, :fill, 150, 150, fallback: "default-image.jpg", class:"img-fluid rounded-circle mb-4"; %>
+        <h1 class="text-white fs-3 fw-bolder"><%= @user.name %></h1>
+        <!--直うち禁止にして-->
+        <%= link_to edit_user_path(@user), class:"btn btn-secondary w-25 " do %>
+          <i class="fas fa-user-cog"></i>
+        <% end %>
+      </div>
     </div>
   </div>
   
+  <div class="page-section text-light" style="background-color: #393C49;" >
+    <div class="container px-4 px-lg-5">
+      <h2 class="text-center mt-0">My Introduction</h2>
+      <hr class="divider"/>
+      <p class="text-center text-white-50"><%= @user.introduction %></p>
+    </div>
+  </div>
+
   <div class="page-section text-light" style="background-color: #393C49;" >
     <div class="container px-4 px-lg-5">
       <h2 class="text-center mt-0">My posts</h2>
@@ -22,33 +32,17 @@
       <div class="container-fluid p-0">
           <div class="row g-0">
             <!--リピート-->
+            <% @posts.each do |post| %>
               <div class="col-lg-4 col-sm-6 p-0">
-                  <a class="portfolio-box" href="#" title="Project Name">
-                      <%= attachment_image_tag @user, :profile_image, fallback: "photo1.jpg", class:"img-fluid"; %>
+                  <%= link_to post_path(post), class:"portfolio-box" do %>
+                      <%= attachment_image_tag post, :image, fallback: "photo1.jpg", class:"img-fluid"; %>
                       <div class="portfolio-box-caption">
                           <div class="project-category text-white-50">Category</div>
                           <div class="project-name">Project Name</div>
                       </div>
-                  </a>
+                  <% end %>
               </div>
-              <div class="col-lg-4 col-sm-6 p-0">
-                  <a class="portfolio-box" href="#" title="Project Name">
-                      <%= attachment_image_tag @user, :profile_image, fallback: "photo1.jpg", class:"img-fluid"; %>
-                      <div class="portfolio-box-caption">
-                          <div class="project-category text-white-50">Category</div>
-                          <div class="project-name">Project Name</div>
-                      </div>
-                  </a>
-              </div>
-              <div class="col-lg-4 col-sm-6 p-0">
-                  <a class="portfolio-box" href="#" title="Project Name">
-                      <%= attachment_image_tag @user, :profile_image, fallback: "photo1.jpg", class:"img-fluid"; %>
-                      <div class="portfolio-box-caption">
-                          <div class="project-category text-white-50">Category</div>
-                          <div class="project-name">Project Name</div>
-                      </div>
-                  </a>
-              </div>
+            <% end %>
               <!--ここまで-->
           </div>
       </div>
