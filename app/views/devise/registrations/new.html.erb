@@ -1,9 +1,8 @@
 <main>
-  <div class="jumbotron jumbotron-extend mb-0">
-    <div class="container px-4 px-lg-5" style="position: relative; top: 20%;">
-      <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
-        <div class="col-lg-6 h-100 w-100 mx-auto" >
-          <div class="form-bg py-3 py-md-5 text-center">
+  <div class="main-sign-up">
+    <div class="masthead py-5">
+      <div class="masthead-content text-white py-4">
+        <div class="container-fluid py-5 my-5 ">
             <h2>Sign up</h2>
             <%= form_with model: @user, url: user_registration_path, local: true do |f| %>
               <%= render "devise/shared/error_messages", resource: resource %>
@@ -32,8 +31,14 @@
             <% end %>
             <%= render "devise/shared/links" %>
             <br />
-          </div>
         </div>
+      </div>
+    </div>
+    <div class="social-icons">
+      <div class="d-flex flex-row flex-lg-column justify-content-center align-items-center h-100 mt-3 mt-lg-0">
+        <a class="btn btn-dark m-3" href="#!"><i class="fab fa-twitter"></i></a>
+        <a class="btn btn-dark m-3" href="#!"><i class="fab fa-facebook-f"></i></a>
+        <a class="btn btn-dark m-3" href="#!"><i class="fab fa-instagram"></i></a>
       </div>
     </div>
   </div>
