@@ -18,7 +18,7 @@
 @import 'font-awesome';
 
 
-/* ブラウザがそれぞれ持っているCSSをリセットするための記述 */
+/* 共通CSS */
 * {
   margin: 0;
   padding: 0;
@@ -82,6 +82,12 @@ p {
   margin-bottom: 1rem;
 }
 
+.page-section {
+  padding: 4rem 0;
+}
+
+// ここまで
+
 // ここからFooterのCSS
 footer {
   background: url("footer.jpg") no-repeat center center scroll; 
@@ -94,7 +100,7 @@ footer {
 
 hr.footer-divider {
   height: 0.1rem;
-  width: 90vw;
+  width: 90%;
   margin: 0 auto;
   background-color: #fff;
   opacity: 1;
@@ -150,14 +156,14 @@ hr.footer-divider {
 }
 
 .page-section {
-  padding: 5rem 0;
+  padding: 4rem 0;
 }
 
 hr.divider {
-  height: 0.2rem;
-  max-width: 4rem;
-  margin: 1.5rem auto;
-  background-color: #f4623a;
+  height: 0.1rem;
+  width: 90%;
+  margin: 0 auto;
+  background-color: #fff;
   opacity: 1;
 }
 // ここまで
