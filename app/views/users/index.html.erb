@@ -38,32 +38,32 @@
     <!--ここまで-->
   
     <!--card-->
-    <section class="py-5" style="background-color:  #393C49;">
-      <div class="container px-3 px-lg-4 mt-5">
-        <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 ">
-          <% @users.each do |user| %>
-            <div class="col mb-5">
-              <div class="card h-100 text-white bg-dark shadow">
-                  <%= attachment_image_tag user, :profile_image, fallback: "photo1.jpg", class:"card-img-top"; %>
-                  <div class="card-body py-2 py-3">
-                      <p class="card-title">
-                        <i class="fa-solid fa-user"></i>  <%= user.name %>
-                      </p>
-                      <p class="card-text">
-                        <i class="fa-solid fa-heart"></i> favorite category
-                      </p>
-                      <p class="card-text">
-                        <i class="fa-solid fa-arrow-up-from-bracket"></i> <%= user.posts.count %>Posts
-                      </p>
-                      <%= link_to user_path(user), class:"btn btn-sm btn-block btn-primary" do %>
-                        More
-                      <% end %>
-                  </div>
-              </div>
+  <section class="py-5" style="background-color:  #393C49;">
+    <div class="container mt-5">
+      <div class="row gx-4 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 ">
+        <% @users.each do |user| %>
+          <div class="col mb-5">
+            <div class="card h-100 text-white bg-dark shadow">
+                <%= attachment_image_tag user, :profile_image, fallback: "photo1.jpg", class:" overflow-hidden" %>
+                <div class="card-body py-2 py-3">
+                    <p class="card-title">
+                      <i class="fa-solid fa-user"></i>  <%= user.name %>
+                    </p>
+                    <p class="card-text">
+                      <i class="fa-solid fa-heart"></i> favorite category
+                    </p>
+                    <p class="card-text">
+                      <i class="fa-solid fa-arrow-up-from-bracket"></i> <%= user.posts.count %>Posts
+                    </p>
+                    <%= link_to user_path(user), class:"btn btn-sm btn-block btn-primary" do %>
+                      More
+                    <% end %>
+                </div>
             </div>
-            
-          <% end %>
-        </div>
+          </div>
+          
+        <% end %>
       </div>
-    </section>
+    </div>
+  </section>
 </main>

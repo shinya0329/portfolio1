@@ -1,0 +1,45 @@
+<% if @category == "JapaneseFood" %>
+  <h1>和食</h1>
+  <!--<% @posts.each do |post| %>-->
+  <!--  <div>-->
+  <!--    <%= link_to post_path(post.id) do %>-->
+  <!--      <%= attachment_image_tag post, :image %>-->
+  <!--    <% end %>-->
+  <!--    <p>投稿ユーザー画像：<%= image_tag('photo1.jpg') %></p>-->
+  <!--    <p>ショップ名：<%= post.shop_name %></p>-->
+  <!--    <p>説明：<%= post.caption %></p>-->
+  <!--    <p>Category：<%= post.category %></p>-->
+  <!--    <p>ユーザーネーム：<%= post.user.name %></p>-->
+      
+  <!--     <p><%= link_to "#{post.comments.count} コメント", post_path(post.id) %></p>-->
+  <!--  </div>-->
+  <!--<% end %>-->
+
+<% elsif @category == "WesternCuisine" %>
+  <h1>West</h1>
+<% elsif @category == "ChineseFood" %>
+  <h1>Chinese</h1>
+<% elsif @category == "AsianFood" %>
+  <h1>Asia</h1>
+<% elsif @category == "Curry" %>
+  <h1>Curry</h1>
+<% elsif @category == "Meat" %>
+  <h1>Meat</h1>
+<% elsif @category == "Drink" %>
+  <h1>Drinl</h1>
+<% elsif @category == "Cafe" %>
+  <h1>cafe</h1>
+<% elsif @category == "Sweets" %>
+  <h1>sweets</h1>
+<% elsif @category == "Noodles" %>
+  <h1>Noodles</h1>
+<% elsif @category == "Bar" %>
+  <h1>Bar</h1>
+<% elsif @category == "Buffet" %>
+  <h1>Buff</h1>
+<% elsif @category == "Family" %>
+  <h1>family</h1>
+<% elsif @category == "Restaurant" %>
+  <h1>REstaurant</h1>
+
+<% end %>

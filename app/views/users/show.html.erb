@@ -1,7 +1,7 @@
 <main>
-  
+
   <div class="bg-image-full">
-    <div class="col-12 h-100 py-5" style="background-color: rgba(0,0,0,0.5);">
+    <div class="col-12 h-100 py-5" style="background-color: rgba(0,0,0,0.3);">
       <div class="text-center my-5">
         <%= attachment_image_tag @user, :profile_image, :fill, 150, 150, fallback: "default-image.jpg", class:"img-fluid rounded-circle mb-4"; %>
         <h1 class="text-white fs-3 fw-bolder"><%= @user.name %></h1>
@@ -12,10 +12,10 @@
       </div>
     </div>
   </div>
-  
+
   <div class="page-section text-light" style="background-color: #393C49;" >
     <div class="container px-4 px-lg-5">
-      <h2 class="text-center mt-0">My Introduction</h2>
+      <h2 class="text-center mt-0">About My Page</h2>
       <hr class="divider"/>
       <p class="text-center text-white-50"><%= @user.introduction %></p>
     </div>
@@ -27,7 +27,7 @@
       <hr class="divider"/>
     </div>
   </div>
-  
+
   <div id="portfolio">
       <div class="container-fluid p-0">
           <div class="row g-0">
@@ -37,8 +37,9 @@
                   <%= link_to post_path(post), class:"portfolio-box" do %>
                       <%= attachment_image_tag post, :image, fallback: "photo1.jpg", class:"img-fluid"; %>
                       <div class="portfolio-box-caption">
-                          <div class="project-category text-white-50">Category</div>
-                          <div class="project-name">Project Name</div>
+                          <div class="project-category text-white-50">Shop name</div>
+                          <div class="project-name"><%= post.shop_name %></div>
+                          <span class="project-category px-3"><%= post.created_at %>  <%= post.category %></span>
                       </div>
                   <% end %>
               </div>

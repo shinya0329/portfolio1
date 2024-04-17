@@ -24,7 +24,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Playfair Display', serif;
-
 }
 
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
@@ -83,6 +82,24 @@ p {
   margin-bottom: 1rem;
 }
 
+// ここからFooterのCSS
+footer {
+  background: url("footer.jpg") no-repeat center center scroll; 
+  background-size: cover;
+}
+
+.footer-img {
+  background-color: rgba(8,32,50,0.9); color: #fff;
+}
+
+hr.footer-divider {
+  height: 0.1rem;
+  width: 90vw;
+  margin: 0 auto;
+  background-color: #fff;
+  opacity: 1;
+}
+// ここまで
 
 // ここからTop画面のCSS
 .main-top {
@@ -133,7 +150,7 @@ p {
 }
 
 .page-section {
-  padding: 8rem 0;
+  padding: 5rem 0;
 }
 
 hr.divider {
@@ -165,9 +182,9 @@ hr.divider {
 }
 // ここまで
 
-// ここからマイページCSS
+// ここからUser詳細CSS
 .bg-image-full {
-  background: url(photo.jpg) no-repeat;
+  background: url(photo6.jpg) no-repeat;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center;
@@ -336,5 +353,56 @@ hr.divider {
     right: 2.5rem;
     width: auto;
   }
+}
+// ここまで
+
+// ここからPosts画面のCSS
+.main-posts {
+  height: 100%;
+  position: relative;
+  background: url("photo8.jpg") #2a5555 no-repeat center center scroll;
+  background-size: cover;
+}
+
+#collection .product-info {
+  top: 10px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: 0.7s ease-in-out;
+  cursor: pointer;
+  transform: rotate(5deg);
+}
+#collection .collection-item:hover .product-info {
+  top: 0;
+  opacity: 1;
+  transform: rotate(0);
+  background-color: rgba(0,0,0,0.7);
+}
+#collection .border {
+  width: 96%;
+  height: 96%;
+} 
+
+.user-icon {
+    position: relative;
+    margin: -65px 0 25px 0;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    border-radius: 100px;
+}
+
+.user-item:hover .user-icon {
+    color: #FFFFFF;
+    background: var(--primary);
+}
+
+.pagination {
+  justify-content: center;
+  background-color:  #1E1E1F;
+  padding-bottom: 5rem;
 }
 // ここまで
