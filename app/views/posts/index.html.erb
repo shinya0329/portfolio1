@@ -6,24 +6,6 @@
             <div class="container-fluid px-4 py-5 my-5 px-lg-0">
                 <h1 class="my-5">Welcome Users Page!!</h1>
                 <p class="mb-5">I'm working hard to finish the development of this site.</p>
-                <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                    <!-- Email address input-->
-                    <div class="row input-group-newsletter">
-                        <div class="col"><input class="form-control" id="email" type="email" placeholder="Enter email address..." aria-label="Enter email address..." data-sb-validations="required,email" /></div>
-                        <div class="col-auto"><button class="btn btn-primary disabled" id="submitButton" type="submit">Notify Me!</button></div>
-                    </div>
-                    <div class="invalid-feedback mt-2" data-sb-feedback="email:required">An email is required.</div>
-                    <div class="invalid-feedback mt-2" data-sb-feedback="email:email">Email is not valid.</div>
-                    <div class="d-none" id="submitSuccessMessage">
-                        <div class="text-center mb-3 mt-2">
-                            <div class="fw-bolder">Form submission successful!</div>
-                            To activate this form, sign up at
-                            <br />
-                            <a href="">https://startbootstrap.com/solution/contact-forms</a>
-                        </div>
-                    </div>
-                    <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3 mt-2">Error sending message!</div></div>
-                </form>
             </div>
         </div>
     </div>
@@ -35,58 +17,70 @@
         </div>
     </div>
   </div>
-
   <div class="page-section" style="background-color: #1E1E1F;">
-    <div class="container">
-      <h2 class="text-center mt-0 text-white">Trending</h2>
-      <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-          <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active" >
-            <%= image_tag "photo7.jpg", class:"d-block w-100" %>
-            <div class="carousel-caption py-5">
-              <h1 >First slide label</h1>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+    <div class="container px-4 px-lg-5">
+      <h1 class="text-center text-light mt-0">About My portfolio</h1>
+      <hr class="divider"/>
+      <div class="row gx-0 my-4 my-lg-5 align-items-center">
+        <div class="col-md-6 p-0 mb-4">
+          <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+              <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active" >
+                <%= image_tag "photo7.jpg", class:"d-block w-100" %>
+                <div class="carousel-caption d-none d-md-block py-5">
+                  <h1 >First slide label</h1>
+                  <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <%= image_tag "photo1.jpg", class:"d-block w-100" %>
+                <div class="carousel-caption d-none d-md-block py-5">
+                  <h1>Second slide label</h1>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <%= image_tag "photo1.jpg", class:"d-block w-100" %>
+                <div class="carousel-caption d-none d-md-block py-5">
+                  <h1>Third slide label</h1>
+                  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                </div>
+              </div>
             </div>
+            <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
           </div>
-          <div class="carousel-item">
-            <%= image_tag "photo1.jpg", class:"d-block w-100" %>
-            <div class="carousel-caption py-5">
-              <h1>Second slide label</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <%= image_tag "photo1.jpg", class:"d-block w-100" %>
-            <div class="carousel-caption py-5">
-              <h1>Third slide label</h1>
-              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-            </div>
+          
+        </div>
+        <div class="col-md-6 p-0 mb-4">
+          <div class="featured-text text center text-lg-left text-light">
+            <h4 class="">Shoreline</h4>
+            <p class="text-white-50 mb-0">
+              Grayscale is open source and MIT licensed. This means you can use it for any project - even commercial projects! Download it, customize it, and publish your website!
+            </p>
           </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
       </div>
     </div>
   </div>
-
-  <section id="collection" class="page-section overflow-hidden" style="background-color: #1E1E1F;">
-    <div class="container-fluid">
+  <section id="collection" class="page-section pt-0 overflow-hidden" style="background-color: #1E1E1F;">
+    <div class="container">
       <h1 class="text-center text-light mt-0">About My portfolio</h1>
       <hr class="divider"/>
-      <div class="row">
+      <div class="row mt-4">
         <!--リピート-->
-        <div class="col-lg-2 col-md-2 col-sm-3 mb-3 image-zoom-effect">
+        <div class="col-lg-3 col-sm-6 mb-4 image-zoom-effect">
           <div class="collection-item position-relative mx-auto">
             <div class="image-holder">
               <%= image_tag "photo1.jpg", class:"img-fluid", alt:"product" %>
@@ -105,7 +99,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-2 col-md-2 col-sm-3 mb-3 image-zoom-effect">
+        <div class="col-lg-3 col-sm-6 mb-4 image-zoom-effect">
           <div class="collection-item position-relative mx-auto">
             <div class="image-holder">
               <%= image_tag "photo2.jpg", class:"img-fluid", alt:"product" %>
@@ -124,7 +118,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-2 col-md-2 col-sm-3 mb-3 image-zoom-effect">
+        <div class="col-lg-3 col-sm-6 mb-4 image-zoom-effect">
           <div class="collection-item position-relative mx-auto">
             <div class="image-holder">
               <%= image_tag "photo3.jpg", class:"img-fluid", alt:"product" %>
@@ -143,7 +137,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-2 col-md-2 col-sm-3 mb-3 image-zoom-effect">
+        <div class="col-lg-3 col-sm-6 mb-4 image-zoom-effect">
           <div class="collection-item position-relative mx-auto">
             <div class="image-holder">
               <%= image_tag "photo4.jpg", class:"img-fluid", alt:"product" %>
@@ -162,53 +156,16 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-2 col-md-2 col-sm-3 mb-3 image-zoom-effect">
-          <div class="collection-item position-relative mx-auto">
-            <div class="image-holder">
-              <%= image_tag "photo4.jpg", class:"img-fluid", alt:"product" %>
-            </div>
-            <div class="product-info position-absolute d-flex justify-content-center align-items-center">
-              <div class="border d-flex justify-content-center align-items-center text-center">
-                <div class="text-wrap">
-                  <h3 class="m-0">
-                    <a href="#" class="text-light">Organic Herbal</a>
-                  </h3>
-                  <div class="btn-wrap">
-                    <a href="shop.html" class="btn btn-link text-light">Shop Now</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-2 col-sm-3 mb-3 image-zoom-effect">
-          <div class="collection-item position-relative mx-auto">
-            <div class="image-holder">
-              <%= image_tag "photo4.jpg", class:"img-fluid", alt:"product" %>
-            </div>
-            <div class="product-info position-absolute d-flex justify-content-center align-items-center">
-              <div class="border d-flex justify-content-center align-items-center text-center">
-                <div class="text-wrap">
-                  <h3 class="m-0">
-                    <a href="#" class="text-light">Organic Herbal</a>
-                  </h3>
-                  <div class="btn-wrap">
-                    <a href="shop.html" class="btn btn-link text-light">Shop Now</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
   </section>
-
-  <section class="page-section"  style="background-color:  #1E1E1F;">
+  <section class="page-section pt-0"  style="background-color:  #1E1E1F;">
     <div class="container-xxl py-5">
       <div class="container">
-        <h2>セクション名</h2>
-        <div class="row g-4">
+      <h1 class="text-center text-light mt-0">Posts</h1>
+      <hr class="divider"/>
+        <div class="row mt-4 g-4">
           <% @posts.each do |post| %>
             <div class="col-sm-6 col-lg-4">
                 <div class="service-item rounded overflow-hidden mb-4 shadow" style="background-color:  black; color: #fff;">
@@ -232,25 +189,6 @@
       </div>
     </div>
   </section>
-
   <%= paginate @posts %>
-
-
-
-  <h1>カテゴリー</h1>
-    <%= link_to "和食", "/posts/category/JapaneseFood" %>
-    <%= link_to "洋食・西洋料理", "/posts/category/WesternCuisine" %>
-    <%= link_to "中華料理", "/posts/category/ChineseFood" %>
-    <%= link_to "アジア・エスニック料理", "/posts/category/AsianFood" %>
-    <%= link_to "カレー", "/posts/category/Curry" %>
-    <%= link_to "焼き肉・ステーキ", "/posts/category/Meat" %>
-    <%= link_to "居酒屋", "/posts/category/Drink" %>
-    <%= link_to "カフェ・喫茶店", "/posts/category/Cafe" %>
-    <%= link_to "スイーツ・ベーカリー", "/posts/category/Sweets" %>
-    <%= link_to "ラーメン・麺類", "/posts/category/Noodles" %>
-    <%= link_to "Bar(バー)", "/posts/category/Bar" %>
-    <%= link_to "ビュッフェ・バイキング", "/posts/category/Buffet" %>
-    <%= link_to "ファミレス・ファストフード", "/posts/category/Family" %>
-    <%= link_to "その他飲食店", "/posts/category/Restaurant" %>
 
 </main>

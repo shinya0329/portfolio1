@@ -294,19 +294,6 @@ hr.divider {
 .masthead .masthead-content p strong {
   font-weight: 700;
 }
-.masthead .masthead-content .input-group-newsletter input {
-  height: auto;
-  width: 100%;
-  font-size: 1rem;
-  padding: 1rem;
-}
-.masthead .masthead-content .input-group-newsletter button {
-  font-size: 0.85rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  padding: calc(1rem + 2px);
-}
 
 @media (min-width: 992px) {
   .masthead {
@@ -410,5 +397,21 @@ hr.divider {
   justify-content: center;
   background-color:  #1E1E1F;
   padding-bottom: 5rem;
+  margin-bottom: 0;
+}
+
+.featured-text {
+  padding: 1rem 0 1rem 2rem;
+  border-left: 0.5rem solid white;
 }
 // ここまで
+
+// カテゴリー一覧画面
+.main-categorys {
+  height: 100%;
+  position: relative;
+  background: url("category_top.jpg") #2a5555 no-repeat center center scroll;
+  background-size: cover;
+}
+
+// ここから

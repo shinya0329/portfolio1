@@ -22,9 +22,14 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-light" href="">
-              <i class="fas fa-user-plus"></i>Category
+            <%=link_to posts_path, class:"nav-link text-light" do %>
+              <i class="fas fa-user-plus"></i>Posts
+            <% end %>
+          <li class"nav-item">
+            <a class="nav-link text-light" href="/categorys">
+              <i class="fas fa-home"></i>Categorys
             </a>
+          </li>
           </li>
           <li class="nav-item">
             <%= link_to new_post_path, class:"nav-link text-light" do %>
@@ -37,7 +42,7 @@
             </a>
           </li>
           <% else %>
-            <li class"nav-item">
+          <li class"nav-item">
             <a class="nav-link text-light" href="/">
               <i class="fas fa-home"></i>Home
             </a>
