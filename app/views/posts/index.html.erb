@@ -3,9 +3,9 @@
     <!--メインビジュアルイメージ-->
     <div class="masthead py-5">
         <div class="masthead-content text-white">
-            <div class="container-fluid px-4 py-5 my-5 px-lg-0">
-                <h1 class="my-5">Welcome Users Page!!</h1>
-                <p class="mb-5">I'm working hard to finish the development of this site.</p>
+            <div class="container-fluid px-4 py-5 my-5 px-lg-0 text-center">
+                <h1 class="my-5 font-change">Welcome to the post list page!!</h1>
+                <h2 class="mb-5 font-change">You can search for the store you are interested in</h2>
             </div>
         </div>
     </div>
@@ -18,10 +18,10 @@
     </div>
   </div>
   <div class="page-section" style="background-color: #1E1E1F;">
-    <div class="container px-4 px-lg-5">
-      <h1 class="text-center text-light mt-0">About My portfolio</h1>
+    <div class="container px-4 px-lg-5 pt-5">
+      <h2 class="text-center text-light mt-5">Let's find a store!</h2>
       <hr class="divider"/>
-      <div class="row gx-0 my-4 my-lg-5 align-items-center">
+      <div class="row gx-0 my-5 align-items-center">
         <div class="col-md-6 p-0 mb-4">
           <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -32,23 +32,23 @@
             <div class="carousel-inner">
               <div class="carousel-item active" >
                 <%= image_tag "photo7.jpg", class:"d-block w-100" %>
-                <div class="carousel-caption d-none d-md-block py-5">
-                  <h1 >First slide label</h1>
-                  <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                <div class="carousel-caption d-none d-lg-block">
+                  <h2>Hippocrates</h2>
+                  <p>Let food be thy medicine and medicine be thy food.</p>
                 </div>
               </div>
               <div class="carousel-item">
-                <%= image_tag "photo1.jpg", class:"d-block w-100" %>
-                <div class="carousel-caption d-none d-md-block py-5">
-                  <h1>Second slide label</h1>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <%= image_tag "post-1.jpg", class:"d-block w-100" %>
+                <div class="carousel-caption d-none d-lg-block">
+                  <h2>Coco Chanel</h2>
+                  <p>I only drink champage on two occasions, when I am in love and when I am not</p>
                 </div>
               </div>
               <div class="carousel-item">
-                <%= image_tag "photo1.jpg", class:"d-block w-100" %>
-                <div class="carousel-caption d-none d-md-block py-5">
-                  <h1>Third slide label</h1>
-                  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                <%= image_tag "post-2.jpg", class:"d-block w-100" %>
+                <div class="carousel-caption d-none d-lg-block">
+                  <h2>Voltaite</h2>
+                  <p>Ice creamm is exquisite. What a pity it isn't illegal</p>
                 </div>
               </div>
             </div>
@@ -65,34 +65,31 @@
         </div>
         <div class="col-md-6 p-0 mb-4">
           <div class="featured-text text center text-lg-left text-light">
-            <h4 class="">Shoreline</h4>
+            <h4>Explanation</h4>
             <p class="text-white-50 mb-0">
-              Grayscale is open source and MIT licensed. This means you can use it for any project - even commercial projects! Download it, customize it, and publish your website!
+              On this page, you can search for the store you are interested in.You can also check the details of each post.Furthermore, you can search for stores by category that you interested in. 
             </p>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <section id="collection" class="page-section pt-0 overflow-hidden" style="background-color: #1E1E1F;">
+  <section id="collection" class="page-section overflow-hidden" style="background-color: #1E1E1F;">
     <div class="container">
-      <h1 class="text-center text-light mt-0">About My portfolio</h1>
+      <h2 class="text-center text-light mt-0">Trendy shops</h2>
       <hr class="divider"/>
-      <div class="row mt-4">
+      <div class="row mt-5">
         <!--リピート-->
         <div class="col-lg-3 col-sm-6 mb-4 image-zoom-effect">
           <div class="collection-item position-relative mx-auto">
             <div class="image-holder">
-              <%= image_tag "photo1.jpg", class:"img-fluid", alt:"product" %>
+              <%= image_tag "about_photo1.jpg", class:"img-fluid", alt:"product" %>
               <div class="product-info position-absolute d-flex justify-content-center align-items-center">
                 <div class="border d-flex justify-content-center align-items-center text-center">
                   <div class="text-wrap">
                     <h3 class="m-0">
-                      <a href="#" class="text-light">Organic Herbal</a>
+                      <a class="text-light">Yoru cafe</a>
                     </h3>
-                    <div class="btn-wrap">
-                      <a href="shop.html" class="btn btn-link text-light">Shop Now</a>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -102,17 +99,14 @@
         <div class="col-lg-3 col-sm-6 mb-4 image-zoom-effect">
           <div class="collection-item position-relative mx-auto">
             <div class="image-holder">
-              <%= image_tag "photo2.jpg", class:"img-fluid", alt:"product" %>
+              <%= image_tag "about_photo2.jpg", class:"img-fluid", alt:"product" %>
             </div>
             <div class="product-info position-absolute d-flex justify-content-center align-items-center">
               <div class="border d-flex justify-content-center align-items-center text-center">
                 <div class="text-wrap">
                   <h3 class="m-0">
-                    <a href="#" class="text-light">Organic Herbal</a>
+                    <a class="text-light">Night bar</a>
                   </h3>
-                  <div class="btn-wrap">
-                    <a href="shop.html" class="btn btn-link text-light">Shop Now</a>
-                  </div>
                 </div>
               </div>
             </div>
@@ -121,17 +115,14 @@
         <div class="col-lg-3 col-sm-6 mb-4 image-zoom-effect">
           <div class="collection-item position-relative mx-auto">
             <div class="image-holder">
-              <%= image_tag "photo3.jpg", class:"img-fluid", alt:"product" %>
+              <%= image_tag "about_photo3.jpg", class:"img-fluid", alt:"product" %>
             </div>
             <div class="product-info position-absolute d-flex justify-content-center align-items-center">
               <div class="border d-flex justify-content-center align-items-center text-center">
                 <div class="text-wrap">
                   <h3 class="m-0">
-                    <a href="#" class="text-light">Organic Herbal</a>
+                    <a  class="text-light">Earth camper</a>
                   </h3>
-                  <div class="btn-wrap">
-                    <a href="shop.html" class="btn btn-link text-light">Shop Now</a>
-                  </div>
                 </div>
               </div>
             </div>
@@ -140,41 +131,37 @@
         <div class="col-lg-3 col-sm-6 mb-4 image-zoom-effect">
           <div class="collection-item position-relative mx-auto">
             <div class="image-holder">
-              <%= image_tag "photo4.jpg", class:"img-fluid", alt:"product" %>
+              <%= image_tag "about_photo4.jpg", class:"img-fluid", alt:"product" %>
             </div>
             <div class="product-info position-absolute d-flex justify-content-center align-items-center">
               <div class="border d-flex justify-content-center align-items-center text-center">
                 <div class="text-wrap">
                   <h3 class="m-0">
-                    <a href="#" class="text-light">Organic Herbal</a>
+                    <a class="text-light">Saturn buffet</a>
                   </h3>
-                  <div class="btn-wrap">
-                    <a href="shop.html" class="btn btn-link text-light">Shop Now</a>
-                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
         </div>
       </div>
     </div>
   </section>
-  <section class="page-section pt-0"  style="background-color:  #1E1E1F;">
+  <section class="page-section"  style="background-color:  #1E1E1F;">
     <div class="container-xxl py-5">
       <div class="container">
-      <h1 class="text-center text-light mt-0">Posts</h1>
+      <h2 class="text-center text-light mt-0">Posts</h2>
       <hr class="divider"/>
-        <div class="row mt-4 g-4">
+        <div class="row mt-5 g-4">
           <% @posts.each do |post| %>
             <div class="col-sm-6 col-lg-4">
-                <div class="service-item rounded overflow-hidden mb-4 shadow" style="background-color:  black; color: #fff;">
+                <div class="service-item rounded overflow-hidden mb-5 shadow" style="background-color:  black; color: #fff;">
                     <%= attachment_image_tag post, :image, class:"w-100 overflow-hidden", style:"max-height: 200px;", fallback: "photo1.jpg" %>
                     <div class="user-item position-relative p-3 pt-0">
                         <div class="user-icon">
                           <%= attachment_image_tag post.user, :profile_image, :fill, 100, 100, fallback: "photo1.jpg", class:"rounded-circle"; %>
                         </div>
-                        <h4 class="mb-3"><%= post.shop_name %></h4>
+                        <h4 class="mb-3 shop-name"><%= post.shop_name %></h4>
                         <p><%= post.caption %></p>
                         <span><i class="fas fa-user"></i> By <%= post.user.name %> ｜ </span>
                         <span><%= link_to "#{post.comments.count} コメント", post_path(post.id), class:"text-white" %></span></br>
@@ -190,5 +177,4 @@
     </div>
   </section>
   <%= paginate @posts %>
-
 </main>

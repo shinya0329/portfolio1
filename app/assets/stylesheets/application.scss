@@ -16,14 +16,15 @@
 @import "bootstrap";
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
-
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
 /* 共通CSS */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Playfair Display', serif;
+  font-family: "Noto Sans JP", sans-serif;
+  
 }
 
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
@@ -34,11 +35,11 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 }
 
 h1, .h1 {
-  font-size: calc(1.375rem + 1.5vw);
+  font-size: calc(2rem + 1.5vw);
 }
 @media (min-width: 1200px) {
   h1, .h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 }
 
@@ -85,9 +86,15 @@ p {
 .page-section {
   padding: 4rem 0;
 }
+.pagination>li>a {          
+  border: none;    
+  color: #fff;   
+  background-color: black;
+}
 
-// ここまで
-
+.font-change {
+  font-family: "Pinyon Script", cursive;
+}
 // ここからFooterのCSS
 footer {
   background: url("footer.jpg") no-repeat center center scroll; 
@@ -95,7 +102,7 @@ footer {
 }
 
 .footer-img {
-  background-color: rgba(8,32,50,0.9); color: #fff;
+  background-color: rgba(0,0,0,0.9); color: #fff;
 }
 
 hr.footer-divider {
@@ -115,15 +122,27 @@ hr.footer-divider {
   background: url(photo3.jpg) #2a5555 no-repeat center center scroll;
   background-size: cover;
 }
+.site-name {
+  font-family: "Pinyon Script", cursive;
+  font-size: calc(5rem + 2vw);
+}
+.my-name {
+  font-family: "Pinyon Script", cursive;
+  font-size: 2rem;
 
-.site-name, .my-name {
-  font-family: 'Playfair Display', serif;
+  
+}
+hr.top-divider {
+  height: 0.1rem;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #fff;
+  opacity: 1;
 }
 
 .btn-Sign-Up {
   background-color: rgba(26, 237, 34, 0.6);
   color: #fff;
-  font-family: 'Avenir', serif;
 }
 .btn-Sign-Up:hover {
   background-color: green;
@@ -132,7 +151,6 @@ hr.footer-divider {
 .btn-Log-in {
   background-color: rgba(0, 102, 255, 0.6);
   color: #fff;
-  font-family: 'Avenir', serif;
 }
 .btn-Log-in:hover {
   background-color: blue;
@@ -152,7 +170,6 @@ hr.footer-divider {
 .proverb {
   position: relative;
   top: 40%;
-  font-family: 'Avenir', serif;
 }
 
 .page-section {
@@ -190,7 +207,7 @@ hr.divider {
 
 // ここからUser詳細CSS
 .bg-image-full {
-  background: url(photo6.jpg) no-repeat;
+  background: url(user-top.jpg) no-repeat;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center;
@@ -247,7 +264,35 @@ hr.divider {
   background-position: center;
   background-size: cover;
 }
+.post-new {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0,0,0,0.6); 
+  height: 50vh
+}
+.form-control {
+  background-color:  #1E1E1F;
+  color: white;
+}
+.form-control:focus {
+  background-color:  #1E1E1F;
+}
+.shop-image {
+  display: inline;
+  width: 60%;
+  border: none;
+  padding: 0;
+  color: #fff;
+}
+select {
+  background-color:  #1E1E1F;
+  color: #fff;
+}
+.btn-info {
+  background-color:  #1E1E1F;
 
+}
 // ここまで
 
 // ここからUser一覧画面CSS
@@ -256,6 +301,14 @@ hr.divider {
   position: relative;
   background: url("photo2.jpg") #2a5555 no-repeat center center scroll;
   background-size: cover;
+}
+.jumbotron-users {
+  position: relative;
+  height: 40vh;
+  min-height: 250px;
+  background: url(photo4.jpg) no-repeat center center;
+  background-size: cover;
+
 }
 // ここまで
 
@@ -286,13 +339,10 @@ hr.divider {
   padding-bottom: 5rem;
 }
 .masthead .masthead-content h1, .masthead .masthead-content .h1 {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
 }
 .masthead .masthead-content p {
-  font-size: 1.2rem;
-}
-.masthead .masthead-content p strong {
-  font-weight: 700;
+  font-size: 2.5rem;
 }
 
 @media (min-width: 992px) {
@@ -309,14 +359,14 @@ hr.divider {
   .masthead .masthead-content {
     padding-top: 0;
     padding-bottom: 0;
-    padding-left: 2rem;
-    padding-right: 9rem;
+    padding-left: 0;
+    padding-right: 3rem;
   }
   .masthead .masthead-content h1, .masthead .masthead-content .h1 {
-    font-size: 3.5rem;
+    font-size: 4rem;
   }
   .masthead .masthead-content p {
-    font-size: 1.3rem;
+    font-size: 2rem;
   }
 }
 @media (min-width: 1200px) {
@@ -347,15 +397,6 @@ hr.divider {
     width: auto;
   }
 }
-// ここまで
-
-// ここからPosts画面のCSS
-.main-posts {
-  height: 100%;
-  position: relative;
-  background: url("photo8.jpg") #2a5555 no-repeat center center scroll;
-  background-size: cover;
-}
 
 #collection .product-info {
   top: 10px;
@@ -377,6 +418,18 @@ hr.divider {
   width: 96%;
   height: 96%;
 } 
+
+
+// ここまで
+
+// ここからPosts画面のCSS
+
+.main-posts {
+  height: 100%;
+  position: relative;
+  background: url("photo8.jpg") #2a5555 no-repeat center center scroll;
+  background-size: cover;
+}
 
 .user-icon {
     position: relative;
@@ -415,3 +468,13 @@ hr.divider {
 }
 
 // ここから
+
+// ここからuser編集画面CSS
+.profile-image {
+  display: inline;
+  width: 60%;
+  border: none;
+  padding: 0;
+  color: #fff;
+}
+// ここまで

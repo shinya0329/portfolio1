@@ -1,56 +1,56 @@
-<div class="bg-image-full-new">
-  <div class="col-12 h-100 py-5" style="background-color: rgba(0,0,0,0.5);">
-    <div class="text-center my-5">
-      <div class="proverb text-light">
-        <p>One cannnot think well, love well,</br>
-          sleep well, if one has not dined well.
-        </p>
-        <p>~Virfinia Woolf~</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="page-section text-light" style="background-color: #393C49;" >
-  <div class="container px-4 px-lg-5">
-    <h2 class="text-center mt-0">Create New post!!(新規投稿フォーム）</h2>
-    <hr class="divider"/>
-
-    <%= form_with model:@post, local:true do |f| %>
-      <div class="form-group">
-        <label for="input-shop-name">Shop Name</label>
-        <%= f.text_field :shop_name, class:"form-control", autofocus: true, id:"input-shop-name", placeholder:"write shop name"%>
-      </div>
-      <div class="form-group">
-        <label for="input-caption">Caption</label>
-        <%= f.text_area :caption, class:"form-control", id:"input-caption" %>
-      </div>
-
-      <div class="form-group">
-        <label for="input-shop-image">Shop Image</label>
-        <%= f.attachment_field :image, class:"form-control", id:"input-shop-image", placeholder: "Shop Image" %>
-      </div>
-
-      <div class="form-group">
-        <label for="input-category">Category</label>
-        <div data-spy="scroll" data-offset="0">
-          <%= f.select :category, [["和食", "1"], ["洋食・西洋料理", "2"], ["中華料理", "3"], ["アジア・エスニック料理", "4"], ["カレー", "5"], ["焼肉・ステーキ", "6"], ["居酒屋", "7"], ["カフェ・喫茶店", "8"], ["スイーツ・ベーカリー", "9"], ["ラーメン・麺類", "10"], ["Bar(バー）", "11"], ["ビュッフェ・バイキング", "12"], ["ファミレス・ファストフード", "13"], ["その他飲食店", "14"]], { id:"input-category" , class: "form-control"}, required: true  %>
+<main>
+  <div class="bg-image-full-new">
+    <div class="col-12 py-5 post-new">
+      <div class="text-center my-5">
+        <div class="proverb text-light text-align-center">
+          <h1 class="font-change">One cannnot think well, love well,</br>
+            sleep well, if one has not dined well.
+          </h1>
+          <h2 class="font-change">~Virfinia Woolf~</h2>
         </div>
       </div>
-
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="option1" id="defaultCheck1">
-        <label class="form-check-label" for="defaultCheck1">
-          Check your post!!
-        </label>
-      </div>
-
-      <div class="form-group">
-        <%= f.submit "Create New Post", class:"btn btn-lg btn-block btn-info mt-4 rounded" %>
-      </div>
-    <% end %>
-
-
-  </div>
+    </div>
 </div>
-
+  <div class="page-section text-white" style="background-color:  #1E1E1F;" >
+    <div class="container px-4 px-lg-5">
+      <h2 class="text-center mt-0">Let's create New post!</h2>
+      <hr class="divider mb-5"/>
+  
+      <%= form_with model:@post, local:true do |f| %>
+        <div class="form-group mt-3">
+          <label for="input-shop-name">Shop Name</label>
+          <%= f.text_field :shop_name, class:"form-control", autofocus: true, id:"input-shop-name", placeholder:"Please write shop name" %>
+        </div>
+        <div class="form-group mb-3">
+          <label for="input-caption">Caption</label>
+          <%= f.text_area :caption, class:"form-control", id:"input-caption", placeholder:"Please write shop caption" %>
+        </div>
+  
+        <div class="form-group mb-3">
+          <label for="input-shop-image">Shop Image</label></br>
+          <%= f.attachment_field :image, class:"form-control shop-image", id:"input-shop-image", placeholder: "Shop Image" %>
+        </div>
+  
+        <div class="form-group mb-4">
+          <label for="input-category">Category</label>
+          <div data-spy="scroll" data-offset="0">
+            <%= f.select :category, [["和食", "1"], ["洋食・西洋料理", "2"], ["中華料理", "3"], ["アジア・エスニック料理", "4"], ["カレー", "5"], ["焼肉・ステーキ", "6"], ["居酒屋", "7"], ["カフェ・喫茶店", "8"], ["スイーツ・ベーカリー", "9"], ["ラーメン・麺類", "10"], ["Bar(バー）", "11"], ["ビュッフェ・バイキング", "12"], ["ファミレス・ファストフード", "13"], ["その他飲食店", "14"]], { id:"input-category" , class: "form-control", include_blank: "カテゴリを選択してください" }, required: true %>
+          </div>
+        </div>
+  
+        <div class="form-check mb-5">
+          <input class="form-check-input" type="checkbox" value="option1" id="defaultCheck1">
+          <label class="form-check-label" for="defaultCheck1">
+            Check your post!!
+          </label>
+        </div>
+  
+        <div class="form-group">
+          <%= f.submit "Create New Post", class:"btn btn-lg btn-block btn-info mt-4 rounded" %>
+        </div>
+      <% end %>
+  
+  
+    </div>
+</div>
+</main>

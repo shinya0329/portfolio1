@@ -3,9 +3,9 @@
     <!--メインビジュアルイメージ-->
     <div class="masthead py-5">
         <div class="masthead-content text-white">
-            <div class="container-fluid px-4 py-5 my-5 px-lg-0">
-                <h1 class="my-5">Welcome Categorys Page!!</h1>
-                <p class="mb-5">I'm working hard to finish the development of this site.</p>
+            <div class="container-fluid px-4 py-5 my-5 px-lg-0 text-center">
+                <h1 class="my-5 font-change">Welcome Categorys Page!!</h1>
+                <h2 class="mb-5 font-change">Let's find your favorite food category</h2>
             </div>
         </div>
     </div>
@@ -18,8 +18,8 @@
     </div>
   </div>
   <section id="collection" class="page-section overflow-hidden" style="background-color: #1E1E1F;">
-    <div class="container">
-      <h1 class="display-4 text-center text-light mt-0">Category list</h1>
+    <div class="container py-5">
+      <h3 class="text-center text-light mt-0">Category list</h3>
       <hr class="divider"/>
       <div class="row my-5 justify-content-center">
         <!--リピート-->
@@ -66,9 +66,6 @@
                   <h3 class="m-0 text-light">
                     <%= link_to "中華料理", "/posts/category/ChineseFood", style:"color: white;" %>
                   </h3>
-                  <div class="btn-wrap">
-                    <a href="shop.html" class="btn btn-link text-light">Shop Now</a>
-                  </div>
                 </div>
               </div>
             </div>
@@ -157,7 +154,7 @@
         <div class="col-lg-3 col-sm-6 mb-4 image-zoom-effect">
           <div class="collection-item position-relative mx-auto">
             <div class="image-holder">
-              <%= image_tag "photo4.jpg", class:"img-fluid", alt:"product" %>
+              <%= image_tag "category-swee.jpg", class:"img-fluid", alt:"product" %>
             </div>
             <div class="product-info position-absolute d-flex justify-content-center align-items-center">
               <div class="border d-flex justify-content-center align-items-center text-center">
@@ -254,5 +251,4 @@
       </div>
     </div>
   </section>
-
 </main>

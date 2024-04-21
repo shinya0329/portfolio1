@@ -3,27 +3,9 @@
     <!--メインビジュアルイメージ-->
     <div class="masthead py-5">
         <div class="masthead-content text-white">
-            <div class="container-fluid px-4 py-5 my-5 px-lg-0">
-                <h1 class="my-5">Welcome Users Page!!</h1>
-                <p class="mb-5">I'm working hard to finish the development of this site.</p>
-                <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                    <!-- Email address input-->
-                    <div class="row input-group-newsletter">
-                        <div class="col"><input class="form-control" id="email" type="email" placeholder="Enter email address..." aria-label="Enter email address..." data-sb-validations="required,email" /></div>
-                        <div class="col-auto"><button class="btn btn-primary disabled" id="submitButton" type="submit">Notify Me!</button></div>
-                    </div>
-                    <div class="invalid-feedback mt-2" data-sb-feedback="email:required">An email is required.</div>
-                    <div class="invalid-feedback mt-2" data-sb-feedback="email:email">Email is not valid.</div>
-                    <div class="d-none" id="submitSuccessMessage">
-                        <div class="text-center mb-3 mt-2">
-                            <div class="fw-bolder">Form submission successful!</div>
-                            To activate this form, sign up at
-                            <br />
-                            <a href="">https://startbootstrap.com/solution/contact-forms</a>
-                        </div>
-                    </div>
-                    <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3 mt-2">Error sending message!</div></div>
-                </form>
+            <div class="container-fluid px-4 py-5 my-5 px-lg-0 text-center">
+                <h1 class="my-5 font-change">Welcome to the user page!!</h1>
+                <h2 class="mb-5 font-change">You can find the users you are interested in.</h2>
             </div>
         </div>
     </div>
@@ -35,17 +17,146 @@
         </div>
     </div>
   </div>
-    <!--ここまで-->
-  
     <!--card-->
-  <section class="py-5" style="background-color:  #1E1E1F;">
-    <div class="container mt-5">
-      <div class="row gx-4 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 ">
+  <div class="page-section px-5" style="background-color:  #1E1E1F;">
+    <div class="row">
+      <div class="col-lg-6 pt-5">
+        <div id="collection" class=" overflow-hidden">
+          <div class="container">
+          <h2 class="text-center text-light mt-0">Trendy shops</h2>
+          <hr class="divider"/>
+          <div class="row mt-5">
+            <!--リピート-->
+            <div class="col-sm-6 mb-4 image-zoom-effect">
+              <div class="collection-item position-relative mx-auto">
+                <div class="image-holder">
+                  <%= image_tag "about_photo1.jpg", class:"img-fluid", alt:"product" %>
+                  <div class="product-info position-absolute d-flex justify-content-center align-items-center">
+                    <div class="border d-flex justify-content-center align-items-center text-center">
+                      <div class="text-wrap">
+                        <h3 class="m-0">
+                          <a class="text-light">Yoru cafe</a>
+                        </h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 mb-4 image-zoom-effect">
+              <div class="collection-item position-relative mx-auto">
+                <div class="image-holder">
+                  <%= image_tag "about_photo2.jpg", class:"img-fluid", alt:"product" %>
+                </div>
+                <div class="product-info position-absolute d-flex justify-content-center align-items-center">
+                  <div class="border d-flex justify-content-center align-items-center text-center">
+                    <div class="text-wrap">
+                      <h3 class="m-0">
+                        <a class="text-light">Night bar</a>
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 mb-4 image-zoom-effect">
+              <div class="collection-item position-relative mx-auto">
+                <div class="image-holder">
+                  <%= image_tag "about_photo3.jpg", class:"img-fluid", alt:"product" %>
+                </div>
+                <div class="product-info position-absolute d-flex justify-content-center align-items-center">
+                  <div class="border d-flex justify-content-center align-items-center text-center">
+                    <div class="text-wrap">
+                      <h3 class="m-0">
+                        <a  class="text-light">Earth camper</a>
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 mb-4 image-zoom-effect">
+              <div class="collection-item position-relative mx-auto">
+                <div class="image-holder">
+                  <%= image_tag "about_photo4.jpg", class:"img-fluid", alt:"product" %>
+                </div>
+                <div class="product-info position-absolute d-flex justify-content-center align-items-center">
+                  <div class="border d-flex justify-content-center align-items-center text-center">
+                    <div class="text-wrap">
+                      <h3 class="m-0">
+                        <a class="text-light">Saturn buffet</a>
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="col-lg-6 pt-5">
+        <div class="container-fluid text-white">
+          <h2 class="text-center mt-0">About this page</h2>
+          <hr class="divider"/>
+          <div class="row mt-5">
+            <div class="col-md-6 text-center">
+                <div class="mt-5 page-caption">
+                    <h1 class="mb-2"><i class="fa-solid fa-user"></i></h1>
+                    <h3 class="mb-2">User</h3>
+                    <p class="mb-0">You can find your favorite user!!</p>
+                </div>
+            </div>
+            <div class="col-md-6 text-center">
+                <div class="mt-5 page-caption">
+                    <h1 class="mb-2"><i class="fa-solid fa-right-to-bracket"></i></h1>
+                    <h3 class="mb-2">favorite</h3>
+                    <p class="mb-0">You can find out the favorite categories of various people.</p>
+                </div>
+            </div>
+            <div class="col-md-6 text-center">
+                <div class="mt-5 page-caption">
+                    <h1 class="mb-2"><i class="fa-solid fa-comment"></i></h1>
+                    <h3 class="mb-2">posts</h3>
+                    <p class="mb-0">You can see the number of posts posted by the user.</p>
+                </div>
+            </div>
+            <div class="col-md-6 text-center">
+                <div class="mt-5 page-caption">
+                    <h1 class="mb-2"><i class="fa-solid fa-heart"></i></h1>
+                    <h3 class="mb-2">More</h3>
+                    <p class="mb-0">You can move to the user's details page.</p>
+                </div>
+            </div>
+          </div>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-section" style="background-color:  #1E1E1F;">
+    <div class="jumbotron jumbotron-users p-0 m-0">
+      <div class="col-12 col-lg-5 text-center h-100" style="background-color: rgba(0,0,0,0.7); ">
+        <div class="proverb text-light">
+          <h2 class="font-change">People who love to eat are </br>
+            always best people.
+          </h2>
+          <h2 class="font-change">~ Julia Child ~</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="page-section" style="background-color:  #1E1E1F;">
+    <div class="container">
+      <h2 class="text-center text-light mt-0">User list</h2>
+      <hr class="divider"/>
+      <div class="row mt-5">
         <% @users.each do |user| %>
-          <div class="col mb-5">
-            <div class="card h-100 text-white bg-dark shadow">
-                <%= attachment_image_tag user, :profile_image, fallback: "photo1.jpg", class:" overflow-hidden" %>
-                <div class="card-body py-2 py-3">
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100 text-white shadow overflow-hidden rounded" style="background-color: #000;">
+                <%= attachment_image_tag user, :profile_image, fallback: "photo1.jpg", class:"h-50 overflow-hidden", style:"background-size: cover;" %>
+                <div class="card-body">
                     <p class="card-title">
                       <i class="fa-solid fa-user"></i>  <%= user.name %>
                     </p>
@@ -61,7 +172,7 @@
                 </div>
             </div>
           </div>
-          
+
         <% end %>
       </div>
     </div>
